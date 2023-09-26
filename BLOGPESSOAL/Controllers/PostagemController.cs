@@ -52,7 +52,11 @@ namespace BLOGPESSOAL.Controller
             if (!validationResult.IsValid)
                 return BadRequest(validationResult.Errors);
 
-            await _postagemService.Create(postagem);
+            var Resposta = await _postagemService.Create(postagem);
+
+            if (Resposta == null)
+                return BadRequest("Tema não encontrado!");
+
             return CreatedAtAction(nameof(GetById), new { id = postagem.Id }, postagem);
         }
 
@@ -70,7 +74,7 @@ namespace BLOGPESSOAL.Controller
             var postagemUpdate = await _postagemService.Update(postagem);
 
             if (postagemUpdate == null)
-                return NotFound("Postagem não encontrada");
+                return NotFound("Postagem e/ou Tema não encontrados");
 
             return Ok(postagemUpdate);
         }

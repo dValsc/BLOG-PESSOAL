@@ -11,11 +11,20 @@ namespace BLOGPESSOAL.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Postagem>().ToTable("tb_postagens");
+            modelBuilder.Entity<Tema>().ToTable("tb_temas");
+
+            // Relacionamento Postagem -> Tema
+            _ = modelBuilder.Entity<Postagem>()
+          .HasOne(_ => _.Tema)
+          .WithMany(t => t.Postagem)
+          .HasForeignKey("TemaId")
+          .OnDelete(DeleteBehavior.Cascade);
         }
 
         //registrar DbSet - objeto responsável por maniular a Tabela
 
         public DbSet<Postagem> Postagens { get; set; } = null!;
+        public DbSet<Tema> Temas { get; set; } = null!;
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
