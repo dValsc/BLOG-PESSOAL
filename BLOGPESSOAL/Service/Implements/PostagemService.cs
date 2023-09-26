@@ -1,6 +1,7 @@
 ﻿using BLOGPESSOAL.Data;
 using BLOGPESSOAL.Model;
 using Microsoft.EntityFrameworkCore;
+using Exception = System.Exception;
 
 namespace BLOGPESSOAL.Service.Implements
 {
@@ -20,29 +21,52 @@ namespace BLOGPESSOAL.Service.Implements
         }
     
 
-        public Task<Postagem?> Create(Postagem postagem)
+        public async Task<Postagem?> Create(Postagem postagem)
         {
-            throw new NotImplementedException();
+            await _context.Postagens.AddAsync(postagem);
+            await _context.SaveChangesAsync();
+
+            return postagem;
         }
 
-        public Task Delete(Postagem postagem)
+        public async Task Delete(Postagem postagem)
         {
-            throw new NotImplementedException();
+            _context.Remove(postagem);
+
+            await _context.SaveChangesAsync();
         }
 
-        public Task<Postagem?> GetById(long id)
+        public async Task<Postagem?> GetById(long id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var postagem = await _context.Postagens.FirstAsync(i => i.Id == id);
+                return postagem;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-        public Task<IEnumerable<Postagem>> GetByTitulo(string titulo)
+        public async Task<IEnumerable<Postagem>> GetByTitulo(string titulo)
         {
-            throw new NotImplementedException();
+            var postagem = await _context.Postagens.Where(t => t.Titulo.Contains(titulo)).ToListAsync();
+            return postagem;
         }
 
-        public Task<Postagem?> Update(Postagem postagem)
+        public async Task<Postagem?> Update(Postagem postagem)
         {
-            throw new NotImplementedException();
+            var postagemUpdate = await _context.Postagens.FindAsync(postagem.Id);
+
+            if (postagemUpdate == null)
+                return null;
+
+            _context.Entry(postagemUpdate).State = EntityState.Detached;
+            _context.Entry(postagem).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return postagem;
         }
     }
 }

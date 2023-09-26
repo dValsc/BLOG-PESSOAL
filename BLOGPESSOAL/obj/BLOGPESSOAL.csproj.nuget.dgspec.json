@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Valéria\\Desktop\\ASPNET\\BLOGPESSOAL\\BLOGPESSOAL\\BLOGPESSOAL.csproj": {}
+    "C:\\Users\\Valéria\\Desktop\\BLOG\\BLOGPESSOAL\\BLOGPESSOAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Valéria\\Desktop\\ASPNET\\BLOGPESSOAL\\BLOGPESSOAL\\BLOGPESSOAL.csproj": {
+    "C:\\Users\\Valéria\\Desktop\\BLOG\\BLOGPESSOAL\\BLOGPESSOAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Valéria\\Desktop\\ASPNET\\BLOGPESSOAL\\BLOGPESSOAL\\BLOGPESSOAL.csproj",
+        "projectUniqueName": "C:\\Users\\Valéria\\Desktop\\BLOG\\BLOGPESSOAL\\BLOGPESSOAL.csproj",
         "projectName": "BLOGPESSOAL",
-        "projectPath": "C:\\Users\\Valéria\\Desktop\\ASPNET\\BLOGPESSOAL\\BLOGPESSOAL\\BLOGPESSOAL.csproj",
+        "projectPath": "C:\\Users\\Valéria\\Desktop\\BLOG\\BLOGPESSOAL\\BLOGPESSOAL.csproj",
         "packagesPath": "C:\\Users\\Valéria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Valéria\\Desktop\\ASPNET\\BLOGPESSOAL\\BLOGPESSOAL\\obj\\",
+        "outputPath": "C:\\Users\\Valéria\\Desktop\\BLOG\\BLOGPESSOAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Valéria\\AppData\\Roaming\\NuGet\\NuGet.Config",

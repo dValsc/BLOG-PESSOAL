@@ -1,6 +1,7 @@
 ﻿using BLOGPESSOAL.Model;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace BLOGPESSOAL.Data
 {
     public class AppDbContext: DbContext
