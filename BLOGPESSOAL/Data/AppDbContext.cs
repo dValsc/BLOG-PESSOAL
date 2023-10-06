@@ -12,6 +12,7 @@ namespace BLOGPESSOAL.Data
         {
             modelBuilder.Entity<Postagem>().ToTable("tb_postagens");
             modelBuilder.Entity<Tema>().ToTable("tb_temas");
+            modelBuilder.Entity<User>().ToTable("tb_usuarios");
 
             // Relacionamento Postagem -> Tema
             _ = modelBuilder.Entity<Postagem>()
@@ -19,12 +20,23 @@ namespace BLOGPESSOAL.Data
           .WithMany(t => t.Postagem)
           .HasForeignKey("TemaId")
           .OnDelete(DeleteBehavior.Cascade);
+
+            // Relacionamento Postagem -> User
+            modelBuilder.Entity<Postagem>()
+                .HasOne(p => p.Usuario)
+                .WithMany(u => u.Postagem)
+                .HasForeignKey("UserId")
+                .OnDelete(DeleteBehavior.Cascade);
         }
+
+
 
         //registrar DbSet - objeto responsável por maniular a Tabela
 
         public DbSet<Postagem> Postagens { get; set; } = null!;
         public DbSet<Tema> Temas { get; set; } = null!;
+
+        public DbSet<User> Users { get; set; } = null!;
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

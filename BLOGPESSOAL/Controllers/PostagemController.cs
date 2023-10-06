@@ -1,13 +1,12 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using BLOGPESSOAL.Model;
+﻿using BLOGPESSOAL.Model;
 using BLOGPESSOAL.Service;
-using BLOGPESSOAL.Service.Implements;
 using FluentValidation;
-using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BLOGPESSOAL.Controller
 {
+    [Authorize]
     [Route("~/postagens")]
     [ApiController]
     public class PostagemController : ControllerBase

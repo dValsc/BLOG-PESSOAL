@@ -18,6 +18,7 @@ namespace BLOGPESSOAL.Model
         public String Texto { get; set; } = string.Empty;
 
         public virtual Tema? Tema { get; set; }
+        public virtual User? Usuario { get; set; }
 
     }
 }
