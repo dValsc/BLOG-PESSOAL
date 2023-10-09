@@ -246,3 +246,7 @@ C:\Users\Valéria\Desktop\Curso Generation\Projetos\BLOG\BLOGPESSOAL\obj\Debug\n
 C:\Users\Valéria\Desktop\Curso Generation\Projetos\BLOG\BLOGPESSOAL\obj\Debug\net7.0\BLOGPESSOAL.pdb
 C:\Users\Valéria\Desktop\Curso Generation\Projetos\BLOG\BLOGPESSOAL\obj\Debug\net7.0\BLOGPESSOAL.genruntimeconfig.cache
 C:\Users\Valéria\Desktop\Curso Generation\Projetos\BLOG\BLOGPESSOAL\obj\Debug\net7.0\ref\BLOGPESSOAL.dll
+C:\Users\Valéria\Desktop\Curso Generation\Projetos\BLOG\BLOGPESSOAL\bin\Debug\net7.0\MicroElements.Swashbuckle.FluentValidation.dll
+C:\Users\Valéria\Desktop\Curso Generation\Projetos\BLOG\BLOGPESSOAL\bin\Debug\net7.0\Scrutor.dll
+C:\Users\Valéria\Desktop\Curso Generation\Projetos\BLOG\BLOGPESSOAL\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Valéria\Desktop\Curso Generation\Projetos\BLOG\BLOGPESSOAL\bin\Debug\net7.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
